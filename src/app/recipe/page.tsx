@@ -250,7 +250,8 @@ export default function Recipe () {
 
 
                     <div className="p-1 sm:absolute sm:inset-0 flex items-end justify-center z-20">
-                        <Text className="text-[1.8rem] sm:text-[3rem] text-[#A0522D] sm:text-[#EFE0D0] font-russo font-black text-center">{language === "pt-BR" ? recipeName : meal.strMeal}</Text>
+                        <Text className="text-[1.8rem] sm:text-[3rem] text-[#A0522D] sm:text-[#EFE0D0] font-russo font-black text-center">{meal.strMeal}</Text>
+                        {/* <Text className="text-[1.8rem] sm:text-[3rem] text-[#A0522D] sm:text-[#EFE0D0] font-russo font-black text-center">{language === "pt-BR" ? recipeName : meal.strMeal}</Text> */}
                     </div>
 
                 </div>
@@ -283,7 +284,8 @@ export default function Recipe () {
                         <Text className="text-[1rem] sm:text-[2rem] font-righteous font-black text-[#C0392B]">Instructions:</Text>
                     </div>
 
-                    {(language === "pt-BR" ? instruTranslated : instructions).map((instruction, index) => (
+                    {/* {(language === "pt-BR" ? instruTranslated : instructions).map((instruction, index) => ( */}
+                    {instructions.map((instruction, index) => (
 
                         <div key={index} className="p-4 mt-4 bg-[#FBF7F1] flex flex-col sm:flex-row gap-x-4 rounded-xl items-center leading-none">
 
