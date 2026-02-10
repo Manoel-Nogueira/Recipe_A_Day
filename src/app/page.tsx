@@ -86,7 +86,8 @@ export default function Home () {
         <div>
 
           <Link href={"/recipe"} className="flex">
-            <Button onClick={() => setLoading(true)} className={twMerge("px-2 rounded-lg bg-[#C0392B] hover:bg-[#A93226] active:bg-[#922B21]",  loading ? "cursor-progress" : "cursor-pointer")}><h1 className="flex items-center gap-2 text-[2rem] font-patrick text-[#FDF6ED] font-black uppercase leading-none">{language === "pt-BR" ? "Receita do dia" : "Recipe of the day"} {loading ? <AiOutlineLoading className="animate-spin"/> : ""}</h1></Button>
+            <Button onClick={() => setLoading(true)} className={twMerge("px-2 rounded-lg bg-[#C0392B] hover:bg-[#A93226] active:bg-[#922B21]",  loading ? "cursor-progress" : "cursor-pointer")}><h1 className="flex items-center gap-2 text-[2rem] font-patrick text-[#FDF6ED] font-black uppercase leading-none">Recipe of the day {loading ? <AiOutlineLoading className="animate-spin"/> : ""}</h1></Button>
+            {/* <Button onClick={() => setLoading(true)} className={twMerge("px-2 rounded-lg bg-[#C0392B] hover:bg-[#A93226] active:bg-[#922B21]",  loading ? "cursor-progress" : "cursor-pointer")}><h1 className="flex items-center gap-2 text-[2rem] font-patrick text-[#FDF6ED] font-black uppercase leading-none">{language === "pt-BR" ? "Receita do dia" : "Recipe of the day"} {loading ? <AiOutlineLoading className="animate-spin"/> : ""}</h1></Button> */}
           </Link>
 
         </div>
