@@ -27,11 +27,20 @@ export default function RootLayout ({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+
+      <head>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dekko&display=swap"/>
+
+      </head>
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
+
     </html>
   );
 }
