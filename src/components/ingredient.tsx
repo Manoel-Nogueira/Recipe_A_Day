@@ -44,37 +44,37 @@ export function Ingredient (props: IngredientProps) {
 
     }, [])
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (language === "pt-BR") {
+    //     if (language === "pt-BR") {
 
-            const getTranslation = async () => {
+    //         const getTranslation = async () => {
 
-                try {
+    //             try {
 
-                    const responseMeasure = await fetch(`https://api.mymemory.translated.net/get?q=${props.measure}&langpair=en|pt-BR`)
-                    const dataMeasure = await responseMeasure.json()
+    //                 const responseMeasure = await fetch(`https://api.mymemory.translated.net/get?q=${props.measure}&langpair=en|pt-BR`)
+    //                 const dataMeasure = await responseMeasure.json()
 
-                    setMeasure(dataMeasure.responseData.translatedText)
+    //                 setMeasure(dataMeasure.responseData.translatedText)
 
-                    const responseIngredient = await fetch(`https://api.mymemory.translated.net/get?q=${props.ingredient}&langpair=en|pt-BR`)
-                    const dataIngredient = await responseIngredient.json()
+    //                 const responseIngredient = await fetch(`https://api.mymemory.translated.net/get?q=${props.ingredient}&langpair=en|pt-BR`)
+    //                 const dataIngredient = await responseIngredient.json()
 
-                    setIngredient(dataIngredient.responseData.translatedText)
+    //                 setIngredient(dataIngredient.responseData.translatedText)
                     
-                } catch (error) {
+    //             } catch (error) {
 
-                    console.error("Error trying to translate -->>", error)
+    //                 console.error("Error trying to translate -->>", error)
                     
-                }
+    //             }
 
-            }
+    //         }
 
-            getTranslation()
+    //         getTranslation()
 
-        }
+    //     }
 
-    }, [language])
+    // }, [language])
 
     return (
 
@@ -99,7 +99,8 @@ export function Ingredient (props: IngredientProps) {
                 </div>
 
                 <div className="">
-                    {language === "pt-BR" ? <Text>{`${measure} ${ingredient}`}</Text> : <Text>{`${props.measure} ${props.ingredient}`}</Text>}
+                    <Text>{`${props.measure} ${props.ingredient}`}</Text>
+                    {/* {language === "pt-BR" ? <Text>{`${measure} ${ingredient}`}</Text> : <Text>{`${props.measure} ${props.ingredient}`}</Text>} */}
                 </div>
 
                 {checked &&
