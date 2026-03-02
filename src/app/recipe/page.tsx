@@ -248,7 +248,6 @@ export default function Recipe () {
                         
                     </div>
 
-
                     <div className="p-1 sm:absolute sm:inset-0 flex items-end justify-center z-20">
                         <Text className="text-[1.8rem] sm:text-[3rem] text-[#A0522D] sm:text-[#EFE0D0] font-russo font-black text-center">{meal.strMeal}</Text>
                         {/* <Text className="text-[1.8rem] sm:text-[3rem] text-[#A0522D] sm:text-[#EFE0D0] font-russo font-black text-center">{language === "pt-BR" ? recipeName : meal.strMeal}</Text> */}
@@ -258,30 +257,26 @@ export default function Recipe () {
 
                 {/* <div className="mt-[2rem] max-w-[43.75rem] w-full"> */}
 
-                <div className="mx-[2rem] mt-[2rem] max-w-[70rem] ">
+                <div className="w-full mt-[2rem] bg-[#FBE6D4] max-w-[70rem] xl:rounded-xl">
+                    <Text className="pl-[1rem] text-[1rem] sm:text-[2rem] font-righteous font-black text-[#C0392B] text-center sm:text-left">Ingredients:</Text>
+                </div>
 
-                    <div>
-                        <Text className="text-[1rem] sm:text-[2rem] font-righteous font-black text-[#C0392B] text-center sm:text-left">Ingredients:</Text>
-                    </div>
+                <div className="m-[2rem] max-w-[70rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 place-content-around">
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 place-content-around">
+                    {measuresIngredients.map(measureIngredient => (
 
-                        {measuresIngredients.map(measureIngredient => (
+                        <div key={measureIngredient[0] + measureIngredient[1]}>
+                            <Ingredient measure={measureIngredient[0]} ingredient={measureIngredient[1]}></Ingredient>
+                        </div>
 
-                            <div key={measureIngredient[0] + measureIngredient[1]} className="mt-4">
-                                <Ingredient measure={measureIngredient[0]} ingredient={measureIngredient[1]}></Ingredient>
-                            </div>
-
-                        ))} 
-
-                    </div>
+                    ))} 
 
                 </div>
 
-                <div className="m-[2rem] max-w-[70rem]">
+                <div className="mt-[2rem] max-w-[70rem]">
 
-                    <div>
-                        <Text className="text-[1rem] sm:text-[2rem] font-righteous font-black text-[#C0392B]">Instructions:</Text>
+                    <div className="bg-[#FBE6D4] xl:rounded-xl">
+                        <Text className="pl-[1rem] text-[1rem] sm:text-[2rem] font-righteous font-black text-[#C0392B] text-center sm:text-left">Instructions:</Text>
                     </div>
 
                     {/* {(language === "pt-BR" ? instruTranslated : instructions).map((instruction, index) => ( */}
@@ -290,11 +285,11 @@ export default function Recipe () {
                         <div key={index} className="p-4 mt-4 bg-[#FBF7F1] flex flex-col sm:flex-row gap-x-4 rounded-xl items-center leading-none">
 
                             <div className="bg-[#FF7F50] rounded-full mb-[0.5rem] sm:mb-0">
-                                <Text className="px-[0.3rem]  sm:px-[0.6rem] py-[0.15rem] sm:py-[0.3rem] font-patrick font-bold text-[0.6rem] sm:text-[1.2rem] text-[#FFFFFF]">{index + 1}</Text>
+                                <Text className="px-[0.3rem] sm:px-[0.6rem] py-[0.15rem] sm:py-[0.3rem] font-patrick font-bold text-[0.6rem] sm:text-[1.2rem] text-[#FFFFFF]">{index + 1}</Text>
                             </div>
 
                             <div>
-                                <pre className="font-dekko text-[0.625rem] sm:text-[1.25rem] font-semibold text-[#53240C] text-wrap leading-[0.75rem] sm:leading-[1.50rem]">{instruction}</pre>
+                                <pre className="font-dekko text-[0.65rem] sm:text-[1.30rem] font-semibold text-[#53240C] text-wrap leading-[0.75rem] sm:leading-[1.50rem]">{instruction}</pre>
                             </div>
 
                         </div>

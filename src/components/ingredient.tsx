@@ -78,7 +78,7 @@ export function Ingredient (props: IngredientProps) {
 
     return (
 
-        <button onClick={() => setChecked(!checked)} className={twMerge("p-4 w-full bg-[#FBF7F1] rounded-xl flex items-center gap-x-2 text-[0.65rem] sm:text-[1.3rem] text-[#53240C] text-left font-dekko leading-none font-semibold lowercase cursor-pointer", checked ? "opacity-75 decoration-4 brightness-[0.97] grayscale-25" : "opacity-100")}>
+        <button onClick={() => setChecked(!checked)} className={twMerge("p-4 w-full bg-[#FBF7F1] rounded-xl flex items-center gap-x-2 text-[0.68rem] sm:text-[1.36rem] text-[#53240C] text-left font-dekko leading-none font-semibold lowercase cursor-pointer", checked ? "opacity-75 decoration-4 brightness-[0.97] grayscale-25" : "opacity-100")}>
 
             {checked ? 
 
