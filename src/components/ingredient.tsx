@@ -98,7 +98,7 @@ export function Ingredient (props: IngredientProps) {
                     <img src={ingredientImage} alt="ingredient" className="object-cover"/>
                 </div>
 
-                <div className="">
+                <div className="pt-[0.25rem]">
                     <Text>{`${props.measure} ${props.ingredient}`}</Text>
                     {/* {language === "pt-BR" ? <Text>{`${measure} ${ingredient}`}</Text> : <Text>{`${props.measure} ${props.ingredient}`}</Text>} */}
                 </div>
